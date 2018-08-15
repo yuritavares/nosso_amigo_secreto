@@ -31,13 +31,13 @@ describe RaffleService do
         expect(result_friends.sort).to eq(@campaign.members.sort)
       end
 
-      it 'a member don't get yourself' do
+      it 'a member dont get yourself' do
         @results.each do |r|
           expect(r.first).not_to eq(r.last)
         end
       end
 
-      it 'a member x don't get a member y that get the member x' do
+      it 'a member x dont get a member y that get the member x' do
         # Desafio
       end
 
