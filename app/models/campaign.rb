@@ -1,4 +1,4 @@
-class Campaign < ApplicationRecord
+ class Campaign < ApplicationRecord
   after_validation :set_member, on: :create
   before_validation :set_status, on: :create
 
@@ -6,6 +6,10 @@ class Campaign < ApplicationRecord
   has_many :members, dependent: :destroy
   enum status: [:pending, :finished]
   validates :title, :description, :user, :status, presence: true
+
+  def count_opened
+    self.members.where(open: true).count
+  end
 
   private
 
