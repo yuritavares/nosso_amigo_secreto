@@ -1,4 +1,4 @@
-$(document).on 'turbolinks:load', ->
+$(document).on('turbolinks:load', function() {
   $('.datepicker').pickadate({
     selectMonths: true,
     selectYears: 5,
@@ -8,4 +8,4 @@ $(document).on 'turbolinks:load', ->
     closeOnSelect: true,
     format: 'dd/mm/yyyy'
   });
-  return
+});
