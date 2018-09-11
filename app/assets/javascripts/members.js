@@ -1,8 +1,3 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
 $(document).on('turbolinks:load', function() {
   $('#member_email, #member_name').keypress(function(e) {
     if ((e.which === 13) && valid_email($( "#member_email" ).val()) && ($( "#member_name" ).val() !== "")) {
@@ -33,7 +28,7 @@ $(document).on('turbolinks:load', function() {
     return false;
   });
 
-  return $('.new_member').on('submit', function(e) {
+  $('.new_member').on('submit', function(e) {
     $.ajax(e.target.action, {
         type: 'POST',
         dataType: 'json',

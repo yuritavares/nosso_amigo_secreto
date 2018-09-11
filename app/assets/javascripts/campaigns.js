@@ -33,7 +33,7 @@ $(document).on('turbolinks:load', function() {
     return false;
   });
 
-  return $('.raffle_campaign').on('submit', function(e) {
+  $('.raffle_campaign').on('submit', function(e) {
     $.ajax(e.target.action, {
         type: 'POST',
         dataType: 'json',
