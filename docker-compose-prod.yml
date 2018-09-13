@@ -35,9 +35,9 @@ services:
     ports:
       - '3000:3000'
     volumes_from:
-    - box
+      - box
     env_file:
-    - '.env-prod'
+      - '.env-prod'
 
   box:
     image: busybox
