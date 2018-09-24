@@ -1,1 +1,1 @@
-$(document).on('turbolinks:load', () => $('.button-collapse').sideNav());
+$(document).on('turbolinks:load', () => $('.button-collapse').sidenav());
