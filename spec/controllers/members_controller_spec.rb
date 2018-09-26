@@ -16,7 +16,6 @@ RSpec.describe MembersController, type: :controller do
       @member_attributes = attributes_for(:member)
       @campaign = create(:campaign, title: 'Right one')
       post :create, params: {member: @member_attributes, campaign: @campaign}
-
     end
 
     it 'Return http success' do
@@ -69,5 +68,4 @@ RSpec.describe MembersController, type: :controller do
       expect(response).to have_http_status(:success)
     end
   end
-
 end
